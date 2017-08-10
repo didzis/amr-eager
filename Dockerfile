@@ -21,6 +21,7 @@ RUN git clone https://github.com/hughperkins/pytorch.git /opt/pytorch
 RUN cd /opt/pytorch && . /opt/torch/install/bin/torch-activate && ./build.sh
 
 # set locale and environment variables
+RUN apt install -y locales
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8  
 ENV LANGUAGE en_US:en
